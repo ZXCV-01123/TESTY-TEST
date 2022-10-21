@@ -63,7 +63,6 @@
     </aside>
     <main style="background-color:greenyellow;">
         a
-        <?php include("im_nav.html") ?>
         <!--
         <aside id="as-r"  style="background-color:purple;">
             a
