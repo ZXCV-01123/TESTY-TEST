@@ -5,68 +5,175 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            margin: 0px;
-        }
-        nav {
-            width: 100%;
-            height: 80px;
-            position: fixed;
-            left: 0px;
-            top: 0px;
-        }
-        main {
-            width: calc(100% - 300px);
-            height: 100vh;
-            float: right;
-            margin-top: 80px;
-        }
-        #as-l {
-            width: 300px;
-            height: calc(100vh - 80px);
-            position: fixed;
-            left: 0px;
-            top: 80px;
-        }
-        #as-r {
-            width: 50%;
-            height: calc(100vh - 80px);
-            position: fixed;
-            right: 0px;
-            top: 80px;
-        }
-        #nav-inside {
-            width: fit-content;
-            height: 80px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .nav-bt {
-            height: 64px;
-            margin-left: 120px;
-            margin-right: 120px;
-            margin-top: 9px;
-        }
-    </style>
+    
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <nav style="background-color:aqua;">
-        <div style="background-color: palevioletred;" id="nav-inside">
-            <img class="nav-bt" src="img/php.png">
-            <img class="nav-bt" src="img/sql.png">
-            <img class="nav-bt" src="img/qm.png">
+    <nav>
+        <div id="nav-inside">
+            <a href="php.html">
+                <img class="nav-bt" src="img/php.png">
+            </a>
+            <div class="vr"></div>
+            <a href="sql.html">
+                <img class="nav-bt" src="img/sql.png">
+            </a>
+            <div class="vr"></div>
+            <a href="js.html">
+                <img class="nav-bt" src="img/js.png">
+            </a>
         </div>
     </nav>
-    <aside id="as-l" style="background-color:rgba(255, 0, 255, 0.5);">
-        a
+
+    <aside id="aside-l">
+        <div class="aside-l-grad-top">
+            <ul class="nav-list">
+                <li class="nav-list-anim">phpmyadmin</li>
+                <hr>
+                <li class="nav-list-anim">Logowanie</li>
+                <hr>
+                <li class="nav-list-anim">
+                    Skladnia
+                    <ul>
+                        <li class="nav-list-anim">DDL</li>
+                        <li class="nav-list-anim">DML</li>
+                        <li class="nav-list-anim">DCL</li>
+                    </ul>
+                </ul>
+
+                </li>
+            </ul>
+        </div>
+        <div class="aside-l-grad-bottom">
+        </div>
     </aside>
-    <main style="background-color:greenyellow;">
-        a
-        <!--
-        <aside id="as-r"  style="background-color:purple;">
-            a
-        </aside>-->
+    
+    <aside id="aside-r">
+    </aside>
+
+    <main>
+        <h2>BAZY DANYCH</h2>
+        <hr>
+
+        <h3>Otwieranie i obsluga php my admina:</h3>
+        <p>
+            Zeby otworzyc panel admina bez danych <br>
+            do paska adresu wpisujemy: <br>
+            <b class="hl">localhost/phpmyadmin</b>
+        </p>
+        <hr>
+
+        <h3>Logowanie do serwera MySQL:</h3>
+        <p>
+            Po otwarciu wiersza polecen pakietu xampp, <br>
+            przy pomocy przycisku <span class="hl">shell</span>, wpisujemy polecenie <br>
+            <b class="hl">mysql -u root -p</b>
+            <p class="ll">
+                mysql - to nazwa serwera DB <br>
+                -u root - to nazwa uzytkownia z wpisanym uzytkownikiem "root" <br>
+                -p - to oczekiwanie na nazwe bazy danych <br>
+            </p>
+        </p>
+        <p>
+            Nastepnie potwierdzamy zapytanie o haslo, <br>
+            i jestesmy zalogowani. <br>
+        </p>
+        <p>
+            Po zalogowaniu wszystkie polecenia z wyjatkiem <br>
+            tych zaczynajacych sie na "\" i polecenia "quit" <br>
+            konczymy srednikiem.
+        </p>
+        <hr>
+
+        <h3>Skladnia Jezyka SQL:</h3>
+        <p>
+            Polecenie SQL sa podzielone na trzy (3) grupy, ze wzgledu na ich przeznaczenie.
+        </p>
+        <ul>
+            <li>
+                <b>DDL</b> - <b class="hl">Data Definition Language</b>, definiowanie danych sluzy do tworzenia, modyfikowania i usuwania obiektow
+            </li>
+            <li>
+                <b>DML</b> - <b class="hl">Data Manipulation Language</b>, manipulowanie danymi czyli wyszukiwanie i modyfikowanie ich.
+            </li>
+            <li>
+                <b>DCL</b> - <b class="hl">Data Control Language</b>, kontrola dostepu, nadawanie i odbieranie uprawnien.
+            </li>
+        </ul>
+        <hr>
+
+        <h3>Instrukcje jezyka SQL</h3>
+        <p>
+            <b>
+                Instrukcje SQL skladaja sie z: <br>
+                slow kluczowych, klauzul, wyrazeni warunkow.
+            </b>
+            <p class="ll">
+                - Wyrazenie okresla co nalezy wykonac, <br>
+                - Klauzula okresla ograniczenia <br>
+                - Warunek definiuje ograniczenia klauzuli <br>
+            </p>
+        </p>
+        <hr>
+
+        <h3>Jezyk Definiowania Danych; DDL</h3>
+        <p>
+            W sklad tego jezyka wchodza instrukcje:
+        </p>
+        <ul>
+            <li><b>CREATE</b> - Tworzy nowy obiekt</li>
+            <li><b>ALTER</b> - Modyfikuje obiekt</li>
+            <li><b>DROP</b> - usuwa obiekt</li>
+        </ul>
+        <p>
+            W zaleznosci jaki efekt chcemy uzyskac, te polecenia moga byc mniej lub bardziej rozbudowane.
+        </p>
+        <p>
+            <b>TWORZENIE BAZY DANYCH</b> to polecenie:
+            <br>
+            CREATE DATABASE <i>[nazwa bazy]</i>;
+        </p>
+        <hr>
+
+        <table>
+            <tr>
+                <th>ATRYBUT</th> <th></th> <th>OPIS</th>
+            </tr>
+                <td>Primary key</td>    <td>-</td> <td class="tddesc"> wskazanie kolumny klucza glownego</td>
+            <tr>
+                <td>NOT NULL</td>       <td>-</td>  <td class="tddesc"> nie pozwala na pozostawianie pustego pola</td>
+            </tr>
+            <tr>
+                <td>AUTO_INCREMENT</td> <td>-</td> <td class="tddesc"> utomatyczne numerowanie</td>
+            </tr>
+            <tr>
+                <td>DEFAULT</td>        <td>-</td> <td class="tddesc"> wartosc domyslna</td>
+            </tr>
+            <tr>
+                <td>UNIQUE</td>         <td>-</td> <td class="tddesc"> nie pozwala na powtarzanie wartosci</td>
+            </tr>
+            <tr>
+                <td>CHECK</td>          <td>-</td> <td class="tddesc"> tworzy warunek ograniczajacy wprowadzane wartosci</td>
+            </tr>
+        </table>
+        <br>
+        <hr>
+
+        <h3>DML - Jezyk manipulowania danymi</h3>
+
+        <p>
+            DML sklada sie z czterech (4) polecen:
+            <ul>
+                <li><b>INSERT</b> - Wstawia dane do bazy danych.</li>
+                <li><b>SELECT</b> - Odczytuje dane z bazy.</li>
+                <li><b>UPDATE</b> - Modyfikuje przypisana wczesniej wartosc</li>
+                <li><b>DELETE</b> - Usuwa rekordy</li>
+            </ul>
+        </p>
     </main>
+    <footer>
+        <span class="right">Ostatnia aktalizacja strony: xx.xx.xxxx</span>
+        <span class="left">Kacper Kordecki</span>
+    </footer>
 </body>
 </html>
